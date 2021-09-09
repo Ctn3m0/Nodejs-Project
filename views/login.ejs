@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('layouts/header'); -%>
+    <body>
+        <%- include('layouts/navbar') -%>
+        <!-- Main Content-->
+        <main class="mb-4">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-md-10 col-lg-8 col-xl-7">
+                        <p>Login</p>
+                        <div class="my-5">
+                            <form action="/users/login" method="POST" enctype="multipart/form-data"> <!--the browser will make a ‘ POST ’
+                                request to the /posts/store end point-->
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        <label>User Name</label>
+                                        <input type="text" class="form-control" placeholder="User Name"
+                                        id="username" name="username" > <!--you need the name attribute else, the data won’t be passed from the form to the server-->
+                                    </div>
+                                </div>
+                                <div class="control-group">
+                                    <div class="form-group floating-label-form-group controls">
+                                        <label>Password</label>
+                                        <input type="password" class="form-control" placeholder="Password"
+                                        id="password" name="password" >
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary"
+                                    id="sendMessageButton">Login</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <%- include('layouts/footer') -%>
+        <%- include('layouts/scripts') -%>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
